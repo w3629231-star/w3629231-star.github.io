@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台灣四大主要量販零售集團介紹</title>
+    <!-- 載入 Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 設定全域字體為 Inter (或其他系統預設無襯線字體) */
+        body {
+            font-family: 'Inter', 'Noto Sans TC', sans-serif;
+            background-color: #eef2ff; /* 輕盈的薰衣草色背景 */
+        }
+        .card {
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        /* 針對圖片容器的圓角和溢出處理 */
+        .image-container {
+            height: 200px; /* 統一圖片高度 */
+            overflow: hidden;
+            border-radius: 0.75rem 0.75rem 0 0;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-10">
+
+    <header class="text-center mb-12 bg-white p-8 rounded-xl shadow-2xl">
+        <h1 class="text-4xl md:text-6xl font-black text-purple-700 mb-4 tracking-tight">
+            🌟 台灣四大主要零售集團深度分析 🌟
+        </h1>
+        <p class="text-xl text-gray-700 max-w-4xl mx-auto">
+            深入了解量販零售領域的領導者：它們的市場定位、獨特商業模式與核心競爭力。
+        </p>
+    </header>
+
+    <main class="max-w-7xl mx-auto">
+        <!-- 賣場資訊卡片區塊 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8">
+
+            <!-- 1. 家樂福 (Carrefour) - 紅色主題 -->
+            <div class="card bg-white rounded-xl shadow-lg border-t-8 border-red-600">
+                <div class="image-container">
+                    <!-- 模擬企業圖片：家樂福 -->
+                    <img src="https://placehold.co/800x400/ef4444/ffffff?text=Carrefour+%E5%AE%B6%E6%A8%82%E7%A6%8F" 
+                         alt="家樂福企業標誌與賣場外觀" class="w-full h-full object-cover">
+                </div>
+                
+                <div class="p-6">
+                    <div class="flex items-center mb-3">
+                        <span class="text-4xl mr-3 text-red-600">🇫🇷</span>
+                        <h2 class="text-3xl font-extrabold text-gray-900">家樂福</h2>
+                    </div>
+                    <span class="inline-block bg-red-100 text-red-800 text-sm px-3 py-1 rounded-full font-semibold mb-4">
+                        #綜合量販 #超市網絡
+                    </span>
+                    <h3 class="text-xl font-bold text-gray-800 mt-2 mb-2">領域定位：全通路綜合零售</h3>
+                    <p class="text-gray-700 mb-4 text-base">
+                        來自法國的跨國集團，在台擁有「大型量販店」和「便利購超市」兩種主要業態，形成強大的混合網路，目標是成為消費者生活中的一站式購物中心。
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li><span class="font-bold text-red-600">🛒 特色一:</span> 門市形態最多元，能深入社區。</li>
+                        <li><span class="font-bold text-red-600">💻 特色二:</span> 積極發展線上購物與外送服務 (App/網購)。</li>
+                        <li><span class="font-bold text-red-600">🏷️ 特色三:</span> 強勢推廣高CP值自有品牌商品。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 2. 好市多 (Costco) - 藍色主題 -->
+            <div class="card bg-white rounded-xl shadow-lg border-t-8 border-blue-700">
+                <div class="image-container">
+                    <!-- 模擬企業圖片：好市多 -->
+                    <img src="https://placehold.co/800x400/1d4ed8/ffffff?text=Costco+%E5%A5%BD%E5%B8%82%E5%A4%9A" 
+                         alt="好市多企業標誌與倉儲賣場內部" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center mb-3">
+                        <span class="text-4xl mr-3 text-blue-700">🇺🇸</span>
+                        <h2 class="text-3xl font-extrabold text-gray-900">好市多</h2>
+                    </div>
+                    <span class="inline-block bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full font-semibold mb-4">
+                        #會員制倉儲 #高品質進口
+                    </span>
+                    <h3 class="text-xl font-bold text-gray-800 mt-2 mb-2">領域定位：高端會員制量販</h3>
+                    <p class="text-gray-700 mb-4 text-base">
+                        美式倉儲式量販的代表，消費者必須付年費才能入場。其模式著重於精簡品項、大量採購，提供高品質和極具競爭力的價格。
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li><span class="font-bold text-blue-700">💎 特色一:</span> 獨特的會員制度，鎖定忠誠顧客。</li>
+                        <li><span class="font-bold text-blue-700">🥩 特色二:</span> 高品質的生鮮食品與大量獨家進口商品。</li>
+                        <li><span class="font-bold text-blue-700">📜 特色三:</span> 自有品牌 Kirkland Signature 在市場上有極高評價。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 3. 大潤發 (RT-Mart) - 橘色主題 -->
+            <div class="card bg-white rounded-xl shadow-lg border-t-8 border-orange-500">
+                <div class="image-container">
+                    <!-- 模擬企業圖片：大潤發 -->
+                    <img src="https://placehold.co/800x400/f97316/ffffff?text=RT-Mart+%E5%A4%A7%E6%BD%A4%E7%99%BC" 
+                         alt="大潤發企業標誌與賣場外觀" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center mb-3">
+                        <span class="text-4xl mr-3 text-orange-500">🏬</span>
+                        <h2 class="text-3xl font-extrabold text-gray-900">大潤發</h2>
+                    </div>
+                    <span class="inline-block bg-orange-100 text-orange-800 text-sm px-3 py-1 rounded-full font-semibold mb-4">
+                        #傳統大型賣場 #價格競爭
+                    </span>
+                    <h3 class="text-xl font-bold text-gray-800 mt-2 mb-2">領域定位：傳統平價量販</h3>
+                    <p class="text-gray-700 mb-4 text-base">
+                        台灣重要的傳統大型量販店之一。雖然股權經歷變動，但仍以廣大的賣場面積和豐富的日用品、家電選擇為特色，堅持價格實惠的策略。
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li><span class="font-bold text-orange-500">💡 特色一:</span> 賣場空間寬敞，商品種類涵蓋生活百貨全面。</li>
+                        <li><span class="font-bold text-orange-500">📉 特色二:</span> 過去以低價和大量促銷吸引顧客。</li>
+                        <li><span class="font-bold text-orange-500">🔁 特色三:</span> 現已被全聯收購，未來零售策略整合備受關注。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 4. 愛買 (A-Mart) - 綠色主題 -->
+            <div class="card bg-white rounded-xl shadow-lg border-t-8 border-green-600">
+                <div class="image-container">
+                    <!-- 模擬企業圖片：愛買 -->
+                    <img src="https://placehold.co/800x400/059669/ffffff?text=A-Mart+%E6%84%9B%E8%B2%B7" 
+                         alt="愛買企業標誌與購物環境" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center mb-3">
+                        <span class="text-4xl mr-3 text-green-600">🛍️</span>
+                        <h2 class="text-3xl font-extrabold text-gray-900">愛買</h2>
+                    </div>
+                    <span class="inline-block bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full font-semibold mb-4">
+                        #遠東集團 #都會量販
+                    </span>
+                    <h3 class="text-xl font-bold text-gray-800 mt-2 mb-2">領域定位：集團資源整合量販</h3>
+                    <p class="text-gray-700 mb-4 text-base">
+                        愛買是遠東集團旗下的量販店品牌，主要分店集中在台灣西部的大型都會區。購物中心複合式經營是其一大特色，能享受集團內部的資源與聯合優惠。
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li><span class="font-bold text-green-600">🏢 特色一:</span> 經常與遠東集團旗下百貨、商場結合。</li>
+                        <li><span class="font-bold text-green-600">📍 特色二:</span> 重視都會區大型店鋪的交通便利性。</li>
+                        <li><span class="font-bold text-green-600">💳 特色三:</span> 整合集團資源，會員卡及支付系統常與集團內其他服務連結。</li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="mt-12 p-8 bg-indigo-50 rounded-xl shadow-xl border-l-4 border-indigo-500">
+            <h3 class="text-2xl font-bold text-indigo-800 mb-3">📌 市場結構說明</h3>
+            <p class="text-indigo-700 text-base">
+                本頁面聚焦於**傳統大型量販店 (Hypermarket)** 與 **倉儲式會員制賣場 (Warehouse)** 這四大核心業者。這四家業者在實體賣場規模、商品廣度與跨國背景方面具有代表性。
+            </p>
+        </div>
+
+    </main>
+
+    <footer class="text-center mt-12 pt-6 border-t border-gray-300">
+        <p class="text-sm text-gray-500">資料整理：台灣主要大型零售通路資訊 (2025)</p>
+    </footer>
+</body>
+</html>
