@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>家樂福 - 深度經營分析 | 工業風報告</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap');
+        
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #1a1a1a;
+            background-image: radial-gradient(#333 1px, transparent 1px);
+            background-size: 20px 20px;
+            color: #e5e5e5;
+        }
+
+        .industrial-border {
+            border: 2px solid #333;
+            position: relative;
+            background: #262626;
+        }
+
+        .industrial-border::after {
+            content: "";
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            width: 20px;
+            height: 20px;
+            border-top: 4px solid #38bdf8; /* 家樂福天藍 */
+            border-left: 4px solid #38bdf8;
+        }
+
+        .section-title {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: linear-gradient(to right, #38bdf8, #0ea5e9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 900;
+        }
+
+        .nav-link:hover {
+            color: #fca311;
+            border-bottom: 2px solid #fca311;
+        }
+
+        .glass-panel {
+            background: rgba(56, 189, 248, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+        }
+
+        /* 自定義捲軸 */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #1a1a1a; }
+        ::-webkit-scrollbar-thumb { background: #444; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #38bdf8; }
+    </style>
+</head>
+<body class="leading-relaxed">
+
+    <nav class="bg-[#111] border-b-4 border-[#38bdf8] sticky top-0 z-50">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center p-4">
+            <div class="flex items-center space-x-3 mb-4 md:mb-0">
+                <a href="index.html" class="flex items-center space-x-3">
+                    <div class="bg-[#38bdf8] p-2 rounded-sm">
+                        <i class="fas fa-industry text-black text-xl"></i>
+                    </div>
+                    <span class="font-black text-2xl tracking-tighter text-white">RETAIL <span class="text-[#38bdf8]">ANALYSIS</span></span>
+                </a>
+            </div>
+            <ul class="flex flex-wrap justify-center gap-6 font-bold text-gray-400">
+                <li><a href="index.html" class="nav-link transition-all">首頁回歸</a></li>
+                <li><a href="costco.html" class="nav-link transition-all">好市多</a></li>
+                <li><a href="pxmart.html" class="nav-link transition-all">全聯體系</a></li>
+                <li><a href="carrefour.html" class="text-[#38bdf8] border-b-2 border-[#38bdf8]">家樂福</a></li>
+                <li><a href="amart.html" class="nav-link transition-all">愛買</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4 py-12 max-w-6xl">
+        
+        <header class="mb-16 text-center">
+            <div class="inline-block bg-sky-600 text-white px-4 py-1 mb-4 font-mono text-sm tracking-widest uppercase">
+                Enterprise Case Study: 004
+            </div>
+            <h1 class="text-5xl md:text-7xl font-black mb-4 tracking-tighter text-white">CARREFOUR <span class="text-sky-400">家樂福</span></h1>
+            <div class="h-1 w-24 bg-[#38bdf8] mx-auto"></div>
+            <p class="mt-6 text-gray-400 font-bold text-xl uppercase tracking-widest text-sky-200">統一全通路整合 / Uni-President Integration</p>
+        </header>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            
+            <div class="md:col-span-2 space-y-8">
+                <section class="industrial-border p-8">
+                    <div class="flex items-center mb-6">
+                        <i class="fas fa-project-diagram text-sky-400 mr-3 text-2xl"></i>
+                        <h2 class="section-title text-3xl">經營核心 / Core Strategy</h2>
+                    </div>
+                    <p class="text-gray-300 text-lg leading-relaxed text-justify">
+                        家樂福目前的經營核心在於納入統一集團後的「全通路生態圈整合」。作為法系品牌轉骨本土企業的典範，家樂福具備從大型量販、中型超市（原頂好系統）到小型便利購的多樣店型。其核心優勢在於能與統一集團旗下的 7-11、康是美進行深度戰略協同，實現跨品牌的點數交換與共享物流資源。
+                    </p>
+                    <div class="mt-6 p-4 bg-sky-900/20 border-l-4 border-sky-500 italic text-gray-400">
+                        「在法式美學與在地實惠之間，建立透明化的供應鏈信任感。」
+                    </div>
+                    <p class="text-gray-300 text-lg mt-6 leading-relaxed text-justify">
+                        家樂福強調節慶行銷的廣度與進口商品的豐富度，同時積極推動「食物轉型」，透過自有品牌與產地直供商品，建立消費者對品質的長期認可。
+                    </p>
+                </section>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="bg-[#222] p-4 border-b-2 border-sky-500">
+                        <div class="text-xs text-gray-500 font-mono">GROUP</div>
+                        <div class="text-2xl font-black text-white">UNI-P</div>
+                    </div>
+                    <div class="bg-[#222] p-4 border-b-2 border-sky-500">
+                        <div class="text-xs text-gray-500 font-mono">FORMAT</div>
+                        <div class="text-2xl font-black text-white">MULTI</div>
+                    </div>
+                    <div class="bg-[#222] p-4 border-b-2 border-sky-500">
+                        <div class="text-xs text-gray-500 font-mono">SERVICE</div>
+                        <div class="text-2xl font-black text-white">SPEEDY</div>
+                    </div>
+                    <div class="bg-[#222] p-4 border-b-2 border-sky-500">
+                        <div class="text-xs text-gray-500 font-mono">ECO-BRAND</div>
+                        <div class="text-2xl font-black text-white">ACT FOR</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-1">
+                <aside class="glass-panel p-8 h-full border-t-4 border-sky-400">
+                    <div class="flex items-center mb-6">
+                        <i class="fas fa-globe-asia text-sky-300 mr-3 text-xl"></i>
+                        <h2 class="text-xl font-bold text-white uppercase tracking-widest">永續願景</h2>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed text-justify mb-8">
+                        在永續發展上，家樂福是台灣零售業推動「食育」與「永續商品」的領導者。長期推廣非籠飼雞蛋、有機農產及友善生態商品，引導消費者進行綠色消費。隨者統一集團資源挹注，正強化「家速配」快商務服務，利用強大物流網提升效率並落實循環經濟。
+                    </p>
+                    <div class="border-t border-gray-700 pt-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <i class="fas fa-link mr-2"></i> 統一集團系統整合度
+                        </div>
+                        <div class="w-full bg-gray-800 h-2 rounded-full overflow-hidden">
+                            <div class="bg-sky-400 h-full w-[78%]"></div>
+                        </div>
+                        <div class="text-right text-xs mt-1 text-sky-400 font-mono">78% INTEGRATED</div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+
+        <div class="mt-16 flex justify-center">
+            <a href="index.html" class="group flex items-center space-x-4 bg-gray-800 hover:bg-sky-600 px-8 py-4 transition-all duration-300">
+                <i class="fas fa-arrow-left text-sky-400 group-hover:text-white"></i>
+                <span class="font-black tracking-widest uppercase">返回系統首頁 / Return to Dashboard</span>
+            </a>
+        </div>
+
+    </main>
+
+    <footer class="bg-black border-t-8 border-sky-700 py-12 mt-20">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-500 font-mono text-sm uppercase tracking-widest mb-4">
+                Node ID: CARREFOUR-TW-SYS-004
+            </p>
+            <div class="flex justify-center space-x-6 text-gray-700">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <i class="fas fa-fingerprint"></i>
+                <i class="fas fa-microchip"></i>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

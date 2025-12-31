@@ -1,309 +1,226 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>台灣四大零售集團深度分析</title>
-    <!-- 載入 Tailwind CSS CDN -->
+    <title>台灣零售版圖導覽 - 工業風分析</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- 載入 Lucide Icons 用於圖示 -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+TC:wght@400;700;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap');
         
         body {
-            font-family: 'Inter', 'Noto Sans TC', sans-serif;
-            scroll-behavior: smooth;
-            background-color: #f8fafc;
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #1a1a1a; /* 深色背景 */
+            background-image: radial-gradient(#333 1px, transparent 1px);
+            background-size: 20px 20px; /* 工業風底紋 */
+            color: #e5e5e5;
         }
 
-        .page {
-            display: none;
-            animation: fadeIn 0.5s ease-out forwards;
+        .industrial-card {
+            background: #262626;
+            border-left: 8px solid;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
 
-        .page.active {
-            display: block;
+        .industrial-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(225deg, rgba(255,255,255,0.05) 50%, transparent 50%);
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+        .industrial-card:hover {
+            transform: translateY(-5px);
+            filter: brightness(1.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
-        .gradient-text {
-            background: linear-gradient(90deg, #4f46e5, #9333ea);
+        .metal-text {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: linear-gradient(to bottom, #fff 0%, #aaa 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        .card-zoom:hover img {
-            transform: scale(1.05);
+        .nav-link:hover {
+            color: #fca311; /* 工業警示橘 */
+            border-bottom: 2px solid #fca311;
         }
 
-        .section-icon {
-            @apply w-10 h-10 rounded-lg flex items-center justify-center mb-4;
-        }
+        /* 自定義捲軸 */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #1a1a1a; }
+        ::-webkit-scrollbar-thumb { background: #444; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #fca311; }
     </style>
 </head>
-<body class="text-slate-800">
+<body class="leading-relaxed">
 
-    <!-- 主選單 / 首頁 -->
-    <div id="home" class="page active">
-        <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
-            <nav class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-                <div class="flex items-center gap-2 cursor-pointer" onclick="showPage('home')">
-                    <div class="bg-indigo-600 p-2 rounded-lg">
-                        <i data-lucide="shopping-cart" class="text-white w-5 h-5"></i>
-                    </div>
-                    <span class="text-xl font-black tracking-tight text-indigo-900">RETAIL TAIWAN</span>
+    <nav class="bg-[#111] border-b-4 border-[#fca311] sticky top-0 z-50">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center p-4">
+            <div class="flex items-center space-x-3 mb-4 md:mb-0">
+                <div class="bg-[#fca311] p-2 rounded-sm">
+                    <i class="fas fa-industry text-black text-xl"></i>
                 </div>
-                <div class="hidden md:flex gap-6 text-sm font-semibold text-slate-600">
-                    <a href="#" onclick="showPage('carrefour')" class="hover:text-red-600 transition">家樂福</a>
-                    <a href="#" onclick="showPage('costco')" class="hover:text-blue-600 transition">好市多</a>
-                    <a href="#" onclick="showPage('pxmart')" class="hover:text-emerald-600 transition">全聯</a>
-                    <a href="#" onclick="showPage('amart')" class="hover:text-purple-600 transition">愛買</a>
-                </div>
-            </nav>
-        </header>
-
-        <section class="max-w-7xl mx-auto px-4 py-12">
-            <div class="text-center mb-16">
-                <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight">
-                    探索台灣零售<br><span class="gradient-text">四大巨頭的成功之道</span>
-                </h1>
-                <p class="text-xl text-slate-500 max-w-2xl mx-auto">
-                    從全球量販到社區超市，深入解析引領台灣消費市場的四大企業核心戰略與未來願景。
-                </p>
+                <span class="font-black text-2xl metal-text">零售觀測／工業版</span>
             </div>
+            <ul class="flex flex-wrap justify-center gap-6 font-bold text-gray-400">
+                <li><a href="costco.html" class="nav-link transition-all">好市多</a></li>
+                <li><a href="pxmart.html" class="nav-link transition-all">全聯體系</a></li>
+                <li><a href="carrefour.html" class="nav-link transition-all">家樂福</a></li>
+                <li><a href="amart.html" class="nav-link transition-all">愛買</a></li>
+                <li class="border-l border-gray-700 pl-6"><a href="reflection.html" class="text-[#fca311] hover:text-white transition-colors">學習心得</a></li>
+            </ul>
+        </div>
+    </nav>
 
-            <!-- 企業卡片導覽 -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- 家樂福 -->
-                <div onclick="showPage('carrefour')" class="group cursor-pointer bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all border border-slate-100 overflow-hidden card-zoom">
-                    <div class="h-48 overflow-hidden">
-                        <img src="002.png" alt="家樂福" class="w-full h-full object-cover transition duration-500">
+    <header class="relative py-20 bg-fixed bg-center bg-cover" style="background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200');">
+        <div class="container mx-auto text-center px-4">
+            <div class="inline-block border-4 border-[#fca311] p-6 mb-6">
+                <h1 class="text-5xl md:text-7xl font-black mb-2 tracking-tighter">TAIWAN RETAIL</h1>
+                <p class="text-xl text-[#fca311] font-mono">台灣零售四大體系之實踐與分析</p>
+            </div>
+            <div class="flex flex-col md:flex-row justify-center gap-4 text-sm font-mono text-gray-400">
+                <span>[ 班級：進修四技企管 3H ]</span>
+                <span class="hidden md:block">|</span>
+                <span>[ 學號：91209H05 ]</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-16 max-w-5xl">
+        
+        <div class="grid gap-8 mb-20">
+            
+            <a href="costco.html" class="industrial-card group border-red-600 block">
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/4 bg-gray-800 flex items-center justify-center p-6">
+                        <img src="001.png" alt="Costco" class="max-w-full grayscale group-hover:grayscale-0 transition-all duration-500">
                     </div>
-                    <div class="p-6 border-t-4 border-red-500">
-                        <h2 class="text-2xl font-bold mb-2 group-hover:text-red-600 transition">家樂福 Carrefour</h2>
-                        <p class="text-sm text-slate-500 line-clamp-2">全通路零售領航者，量販與超市的最佳結合。</p>
-                        <div class="mt-4 flex items-center text-red-600 font-bold text-sm">
-                            了解詳情 <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                    <div class="p-8 md:w-3/4">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-3xl font-black text-white">COSTCO <span class="text-red-600 text-lg ml-2">好市多</span></h3>
+                            <span class="bg-red-600 text-white text-xs px-2 py-1 font-mono">CODE: 001</span>
                         </div>
+                        <p class="text-gray-400 text-lg mb-6">美式倉儲會員制霸主。堅持低毛利與 Kirkland Signature 自有品牌策略，建立極高忠誠度。</p>
+                        <div class="h-1 w-20 bg-red-600 group-hover:w-full transition-all duration-700"></div>
                     </div>
                 </div>
+            </a>
 
-                <!-- 好市多 -->
-                <div onclick="showPage('costco')" class="group cursor-pointer bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all border border-slate-100 overflow-hidden card-zoom">
-                    <div class="h-48 overflow-hidden">
-                        <img src="001.png" alt="好市多" class="w-full h-full object-cover transition duration-500">
+            <a href="pxmart.html" class="industrial-card group border-blue-700 block">
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/4 bg-gray-800 flex items-center justify-center p-6">
+                        <img src="002.png" alt="PX Mart" class="max-w-full grayscale group-hover:grayscale-0 transition-all duration-500">
                     </div>
-                    <div class="p-6 border-t-4 border-blue-700">
-                        <h2 class="text-2xl font-bold mb-2 group-hover:text-blue-700 transition">好市多 Costco</h2>
-                        <p class="text-sm text-slate-500 line-clamp-2">美式會員制倉儲，極致品質與大包裝的代名詞。</p>
-                        <div class="mt-4 flex items-center text-blue-700 font-bold text-sm">
-                            了解詳情 <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                    <div class="p-8 md:w-3/4">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-3xl font-black text-white">PX MART <span class="text-blue-700 text-lg ml-2">全聯集團</span></h3>
+                            <span class="bg-blue-700 text-white text-xs px-2 py-1 font-mono">CODE: 002</span>
                         </div>
+                        <p class="text-gray-400 text-lg mb-6">全台最大生鮮冷鏈集團。整合超市與量販，建立 PX Pay 支付生態圈，據點最密、採購力強。</p>
+                        <div class="h-1 w-20 bg-blue-700 group-hover:w-full transition-all duration-700"></div>
                     </div>
                 </div>
+            </a>
 
-                <!-- 全聯 -->
-                <div onclick="showPage('pxmart')" class="group cursor-pointer bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all border border-slate-100 overflow-hidden card-zoom">
-                    <div class="h-48 overflow-hidden">
-                        <img src="003.png" alt="全聯" class="w-full h-full object-cover transition duration-500">
+            <a href="carrefour.html" class="industrial-card group border-cyan-500 block">
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/4 bg-gray-800 flex items-center justify-center p-6">
+                        <img src="004.png" alt="Carrefour" class="max-w-full grayscale group-hover:grayscale-0 transition-all duration-500">
                     </div>
-                    <div class="p-6 border-t-4 border-emerald-600">
-                        <h2 class="text-2xl font-bold mb-2 group-hover:text-emerald-600 transition">全聯 PX Mart</h2>
-                        <p class="text-sm text-slate-500 line-clamp-2">深入社區的民生守護者，數位與實體的完美滲透。</p>
-                        <div class="mt-4 flex items-center text-emerald-600 font-bold text-sm">
-                            了解詳情 <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                    <div class="p-8 md:w-3/4">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-3xl font-black text-white">CARREFOUR <span class="text-cyan-500 text-lg ml-2">家樂福</span></h3>
+                            <span class="bg-cyan-500 text-white text-xs px-2 py-1 font-mono">CODE: 004</span>
                         </div>
+                        <p class="text-gray-400 text-lg mb-6">統一集團全通路生態圈。領先推動食物轉型、有機專區與非籠飼雞蛋，落實永續願景。</p>
+                        <div class="h-1 w-20 bg-cyan-500 group-hover:w-full transition-all duration-700"></div>
                     </div>
                 </div>
+            </a>
 
-                <!-- 愛買 -->
-                <div onclick="showPage('amart')" class="group cursor-pointer bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all border border-slate-100 overflow-hidden card-zoom">
-                    <div class="h-48 overflow-hidden">
-                        <img src="004.png" alt="愛買" class="w-full h-full object-cover transition duration-500">
+            <a href="amart.html" class="industrial-card group border-orange-500 block">
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/4 bg-gray-800 flex items-center justify-center p-6">
+                        <img src="005.png" alt="a.mart" class="max-w-full grayscale group-hover:grayscale-0 transition-all duration-500">
                     </div>
-                    <div class="p-6 border-t-4 border-purple-600">
-                        <h2 class="text-2xl font-bold mb-2 group-hover:text-purple-600 transition">愛買 A-Mart</h2>
-                        <p class="text-sm text-slate-500 line-clamp-2">遠東集團核心成員，在地化經營與精緻生活的橋樑。</p>
-                        <div class="mt-4 flex items-center text-purple-600 font-bold text-sm">
-                            了解詳情 <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                    <div class="p-8 md:w-3/4">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-3xl font-black text-white">A.MART <span class="text-orange-500 text-lg ml-2">愛買</span></h3>
+                            <span class="bg-orange-500 text-white text-xs px-2 py-1 font-mono">CODE: 005</span>
                         </div>
+                        <p class="text-gray-400 text-lg mb-6">遠東集團零售板塊。強調在地農業支持與精緻化的親子購物空間，結合 SOGO 與 HAPPY GO 資源。</p>
+                        <div class="h-1 w-20 bg-orange-500 group-hover:w-full transition-all duration-700"></div>
                     </div>
+                </div>
+            </a>
+
+        </div>
+
+        <section class="border-2 border-gray-700 p-1">
+            <div class="bg-gray-800 p-6">
+                <div class="flex items-center space-x-2 mb-6 border-b border-gray-600 pb-4">
+                    <i class="fas fa-chart-bar text-[#fca311]"></i>
+                    <h2 class="text-xl font-black uppercase tracking-widest">核心優勢分析矩陣 / Matrix Analysis</h2>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="text-xs uppercase text-gray-500 border-b border-gray-700 font-mono">
+                                <th class="px-6 py-4">System Type</th>
+                                <th class="px-6 py-4">Background</th>
+                                <th class="px-6 py-4">Core Advantage</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-300 divide-y divide-gray-700">
+                            <tr class="hover:bg-gray-700/50">
+                                <td class="px-6 py-4 font-bold text-red-500">好市多</td>
+                                <td class="px-6 py-4">美商直營</td>
+                                <td class="px-6 py-4">會員制量販、進口獨家商品</td>
+                            </tr>
+                            <tr class="hover:bg-gray-700/50">
+                                <td class="px-6 py-4 font-bold text-blue-500">全聯體系</td>
+                                <td class="px-6 py-4">林敏雄家族</td>
+                                <td class="px-6 py-4">據點最密、生鮮採購力強</td>
+                            </tr>
+                            <tr class="hover:bg-gray-700/50">
+                                <td class="px-6 py-4 font-bold text-cyan-400">家樂福</td>
+                                <td class="px-6 py-4">統一集團</td>
+                                <td class="px-6 py-4">全通路布局、集團點數通用</td>
+                            </tr>
+                            <tr class="hover:bg-gray-700/50">
+                                <td class="px-6 py-4 font-bold text-orange-400">愛買</td>
+                                <td class="px-6 py-4">遠東集團</td>
+                                <td class="px-6 py-4">在地化行銷、集團百貨資源</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </section>
-    </div>
+    </main>
 
-    <!-- 企業分頁 Template -->
-    <div id="detail-page" class="page">
-        <nav class="bg-white border-b sticky top-0 z-50">
-            <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-                <button onclick="showPage('home')" class="flex items-center gap-2 text-slate-600 hover:text-indigo-600 transition font-bold">
-                    <i data-lucide="chevron-left" class="w-5 h-5"></i> 返回首頁
-                </button>
-                <div id="detail-nav-title" class="font-black text-xl"></div>
+    <footer class="bg-black border-t-8 border-[#fca311] py-12">
+        <div class="container mx-auto px-4 flex flex-col items-center">
+            <div class="mb-6 flex gap-4">
+                <i class="fab fa-html5 text-3xl text-gray-700"></i>
+                <i class="fab fa-css3-alt text-3xl text-gray-700"></i>
+                <i class="fab fa-js text-3xl text-gray-700"></i>
             </div>
-        </nav>
-
-        <div id="detail-content" class="max-w-5xl mx-auto px-4 py-12">
-            <!-- 內容將由 JS 動態填充 -->
-        </div>
-    </div>
-
-    <footer class="bg-slate-900 text-slate-400 py-12 mt-20">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <p class="text-sm">© 2025 台灣零售產業深度研究報告</p>
+            <p class="text-gray-500 font-mono text-sm uppercase tracking-widest">
+                System Status: <span class="text-green-500 animate-pulse">● Online</span>
+            </p>
+            <p class="text-gray-600 mt-2">&copy; 2025 台灣零售版圖分析報告. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <script>
-        // 企業詳細數據
-        const companies = {
-            carrefour: {
-                name: '家樂福 Carrefour',
-                color: 'red',
-                img: 'http://googleusercontent.com/image_generation_content/1',
-                spirit: '「顧客至上，熱愛食物」— 致力於提供高品質的商品，讓每個人都能負擔得起健康與永續的生活。',
-                methods: [
-                    '全通路策略：結合大型量販、便利購超市與電商 App，實現無縫購物體驗。',
-                    '在地採購：與台灣小農合作，推廣友善農法商品，縮短碳足跡。',
-                    '數位轉型：領先業界導入自動化物流中心與 AI 補貨系統。'
-                ],
-                future: '目標成為全球數位領先零售商，擴大無人商店實驗，並深化個人化數據行銷。',
-                sustainability: '「食物轉型計畫」：推動非籠飼雞蛋、減塑包裝，目標在 2030 年減少 50% 的食物浪費。'
-            },
-            costco: {
-                name: '好市多 Costco',
-                color: 'blue',
-                img: 'http://googleusercontent.com/image_generation_content/0',
-                spirit: '「以最合適的價格提供高品質商品」— 透過會員制度，將節省下來的成本直接回饋給消費者。',
-                methods: [
-                    '會員制經營：年費收入支撐低毛利策略，鎖定高忠誠度消費群。',
-                    '大包裝模式：減少包裝耗材與物流頻率，提升營運效率。',
-                    'SKU 精簡化：精選熱門商品，確保每一項商品都具備極高市場競爭力。'
-                ],
-                future: '持續優化線上購物體驗，並在台灣尋找更多開設實體加油站與新據點的機會，強化一站式體驗。',
-                sustainability: '推行「資源節約」計畫，提升全球物流中心的太陽能發電比例，並嚴格管控供應鏈的人權與環境標準。'
-            },
-            pxmart: {
-                name: '全聯福利中心 PX Mart',
-                color: 'emerald',
-                img: 'http://googleusercontent.com/image_generation_content/2',
-                spirit: '「實在真便宜」— 提供便利、品質優良且價格實惠的民生必需品，成為鄰里的好鄰居。',
-                methods: [
-                    '高滲透率佈點：採取「一里一全聯」策略，深入住宅區。',
-                    'PX Pay 生態系：透過行動支付整合會員點數，掌握千萬級數據流量。',
-                    '冷鏈優勢：投資上百億建立自動化生鮮處理中心，確保農場到餐桌的新鮮。'
-                ],
-                future: '整合大潤發後，將發展「超市+量販」雙引擎模式，並開發更多自有品牌 (OFF COFFEE、We Sweet)。',
-                sustainability: '「惜食計畫」：將即期商品捐贈給弱勢團體。並推動「循環杯」與「減塑門市」試點。'
-            },
-            amart: {
-                name: '愛買 A-Mart',
-                color: 'purple',
-                img: 'http://googleusercontent.com/image_generation_content/3',
-                spirit: '「為台灣家庭創造精緻生活」— 結合遠東集團資源，提供優質的購物環境與貼心的服務。',
-                methods: [
-                    '都會生活圈：選址多位於都會樞紐，結合購物中心形成複合式商場。',
-                    '集團資源綜效：結合 HAPPY GO 點數與遠東銀行金融服務，打造跨產業會員生態。',
-                    '嚴選商品：特別強化生鮮與家電領域的專業導購。'
-                ],
-                future: '發展「智能量販店」，導入自助結帳與電子標籤，提升服務品質並優化人力配置。',
-                sustainability: '配合遠東集團 CSR 策略，推動太陽能電站安裝、節能空調更新，並定期舉辦公益捐贈活動。'
-            }
-        };
-
-        function showPage(pageId) {
-            // 隱藏所有頁面
-            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-            
-            if (pageId === 'home') {
-                document.getElementById('home').classList.add('active');
-                window.scrollTo(0, 0);
-            } else {
-                const data = companies[pageId];
-                const detailPage = document.getElementById('detail-page');
-                const content = document.getElementById('detail-content');
-                const navTitle = document.getElementById('detail-nav-title');
-
-                navTitle.innerText = data.name;
-                navTitle.style.color = data.color === 'emerald' ? '#059669' : 
-                                       data.color === 'blue' ? '#1d4ed8' : 
-                                       data.color === 'red' ? '#dc2626' : '#9333ea';
-
-                content.innerHTML = `
-                    <div class="mb-12 rounded-3xl overflow-hidden shadow-2xl h-[400px]">
-                        <img src="${data.img}" class="w-full h-full object-cover">
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                        <!-- 核心精神 -->
-                        <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm">
-                            <div class="section-icon bg-${data.color}-100">
-                                <i data-lucide="heart" class="text-${data.color}-600"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold mb-4">核心精神</h3>
-                            <p class="text-slate-600 leading-relaxed text-lg">${data.spirit}</p>
-                        </div>
-
-                        <!-- 經營方法 -->
-                        <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm">
-                            <div class="section-icon bg-${data.color}-100">
-                                <i data-lucide="settings" class="text-${data.color}-600"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold mb-4">經營方法</h3>
-                            <ul class="space-y-4">
-                                ${data.methods.map(m => `
-                                    <li class="flex items-start gap-3 text-slate-600">
-                                        <i data-lucide="check-circle" class="text-${data.color}-500 w-5 h-5 mt-1 shrink-0"></i>
-                                        <span>${m}</span>
-                                    </li>
-                                `).join('')}
-                            </ul>
-                        </div>
-
-                        <!-- 未來展望 -->
-                        <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm">
-                            <div class="section-icon bg-${data.color}-100">
-                                <i data-lucide="trending-up" class="text-${data.color}-600"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold mb-4">未來展望</h3>
-                            <p class="text-slate-600 leading-relaxed text-lg">${data.future}</p>
-                        </div>
-
-                        <!-- 永續方式 -->
-                        <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm">
-                            <div class="section-icon bg-${data.color}-100">
-                                <i data-lucide="leaf" class="text-${data.color}-600"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold mb-4">永續方式</h3>
-                            <p class="text-slate-600 leading-relaxed text-lg font-semibold border-l-4 border-${data.color}-500 pl-4">
-                                ${data.sustainability}
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="mt-16 text-center">
-                        <button onclick="showPage('home')" class="bg-slate-900 text-white px-8 py-3 rounded-full hover:bg-slate-800 transition font-bold shadow-lg">
-                            返回首頁
-                        </button>
-                    </div>
-                `;
-
-                detailPage.classList.add('active');
-                lucide.createIcons(); // 重新渲染圖示
-                window.scrollTo(0, 0);
-            }
-        }
-
-        // 初始化圖示
-        window.onload = () => {
-            lucide.createIcons();
-        };
-    </script>
 </body>
 </html>
