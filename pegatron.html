@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>企業專頁 - 和碩聯合科技 (Pegatron)</title>
+    <style>
+        :root {
+            --tech-purple: #9c27b0;
+            --tech-blue: #2196f3;
+            --tech-yellow: #ffea00;
+            --bg-dark: #0d1117;
+            --card-gray: #1c2128;
+            --text-light: #e6edf3;
+            --accent-pink: #f06292;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            font-family: 'Segoe UI', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* 固定頂部學籍資訊 */
+        .student-bar {
+            background: var(--tech-yellow);
+            color: #000;
+            text-align: center;
+            padding: 10px 0;
+            font-weight: bold;
+            font-size: 1.1em;
+            letter-spacing: 1px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* 導覽區域 */
+        .nav-container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .back-home-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border: 1px solid var(--tech-purple);
+            color: var(--accent-pink);
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s;
+            background: rgba(156, 39, 176, 0.1);
+        }
+
+        .back-home-btn:hover {
+            background: var(--tech-purple);
+            color: white;
+            box-shadow: 0 0 20px rgba(156, 39, 176, 0.5);
+        }
+
+        /* 主內容區 */
+        .main-content {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: var(--card-gray);
+            border-radius: 12px;
+            border: 1px solid #444c56;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* 企業代表圖 (120dpi 高解析度感官) */
+        .company-hero-img {
+            width: 100%;
+            height: 400px;
+            background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=1200');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .img-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(13, 17, 23, 0.95));
+            padding: 30px;
+        }
+
+        .company-title {
+            margin: 0;
+            color: #fff;
+            font-size: 2.5em;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        /* 文字內容排版 */
+        .article-body {
+            padding: 40px;
+        }
+
+        h2 {
+            border-left: 5px solid var(--tech-purple);
+            padding-left: 15px;
+            color: var(--accent-pink);
+            margin-top: 30px;
+        }
+
+        .content-card {
+            background: #0d1117;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-right: 2px solid var(--tech-purple);
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 15px;
+        }
+
+        .highlight {
+            color: var(--tech-blue);
+            font-weight: bold;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px;
+            color: #8b949e;
+            font-size: 0.9em;
+        }
+
+        .industrial-tag {
+            background: var(--tech-purple);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            display: inline-block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="student-bar">
+        [ 班級：進修四技企管 3H ] &nbsp;&nbsp;&nbsp;&nbsp; [ 學號：91209H05 李Ｏ儒 ]
+    </div>
+
+    <div class="nav-container">
+        <a href="index.html" class="back-home-btn">🏠 返回首頁 (index.html)</a>
+    </div>
+
+    <div class="main-content">
+        <div class="company-hero-img">
+            <div class="img-overlay">
+                <span class="industrial-tag">GLOBAL DIVERSIFIED DESIGN</span>
+                <h1 class="company-title">05 和碩聯合科技 (Pegatron)</h1>
+            </div>
+        </div>
+
+        <div class="article-body">
+            <div class="content-card">
+                <h2>經營理念：快樂工作、卓越卓越</h2>
+                <p>和碩聯合科技秉持<span class="highlight">「快樂工作、卓越卓越」</span>的文化，致力於將「工程」與「美學」完美結合。作為從母公司華碩分家而出的代工巨擘，和碩強調不僅要提供製造服務，更要透過強大的設計研發能力（DMS），與客戶建立深度的戰略夥伴關係。</p>
+            </div>
+
+            <div class="content-card">
+                <h2>2026 未來策略：多元終端與衛星佈局</h2>
+                <p>邁向 2026 年，和碩正加速脫離傳統消費性電子代工，轉向高附加價值市場：</p>
+                <ul>
+                    <li><strong>低軌衛星 (LEO) 終端設備：</strong> 2026 年隨著全球衛星網路覆蓋率提升，和碩將量產次世代<span class="highlight">衛星用戶終端 (User Terminal)</span> 與基站設備，成為通訊部門的新成長動能。</li>
+                    <li><strong>車用電子與自駕系統：</strong> 2026 年將在北美與東南亞建立專屬車電生產基地，並強化與電動車新創廠商在<span class="highlight">中控台主機 (IVI)</span> 與自駕控制單元的技術深度合作。</li>
+                    <li><strong>韌性供應鏈與自動化：</strong> 預計 2026 年和碩在印度、越南及墨西哥的自動化產線佔比將大幅提升，實現真正意義上的「China+N」全球化佈局，降低地緣政治風險。</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h2>市場地位與分析</h2>
+                <p>和碩是全球排名前三的電子代工大廠。在企管策略分析中，和碩最大的優勢在於其<strong>靈活的決策機制</strong>與<strong>優異的跨領域整合能力</strong>。面對 2026 年的挑戰，和碩成功地在智慧型手機業務之外，開闢出通訊基礎設施與智慧車用兩大新藍海，展現了企業營運的極佳韌性與多元化避險能力。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        © 2025 企管系專題報告 | 工業科技風格網頁設計
+    </div>
+
+</body>
+</html>

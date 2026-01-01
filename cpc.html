@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>企業專頁 - 台灣中油 (CPC Corporation)</title>
+    <style>
+        :root {
+            --tech-green: #39ff14;
+            --cpc-green: #008d45;
+            --tech-yellow: #ffea00;
+            --bg-dark: #0d1117;
+            --card-gray: #161b22;
+            --text-light: #e6edf3;
+            --accent-blue: #00d2ff;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            font-family: 'Segoe UI', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .student-bar {
+            background: var(--tech-yellow);
+            color: #000;
+            text-align: center;
+            padding: 10px 0;
+            font-weight: bold;
+            font-size: 1.1em;
+            letter-spacing: 1px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .back-home-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border: 1px solid var(--cpc-green);
+            color: var(--tech-green);
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            background: rgba(0, 141, 69, 0.1);
+        }
+
+        .main-content {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: var(--card-gray);
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* 使用您上傳的形象圖 004.jpg */
+        .company-hero-img {
+            width: 100%;
+            height: 450px;
+            background-image: url('004.jpg'); 
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .img-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(13, 17, 23, 0.95));
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* 融入上傳的標誌 03.jpg */
+        .cpc-logo-mini {
+            width: 80px;
+            height: 80px;
+            background: white;
+            padding: 5px;
+            border-radius: 50%;
+        }
+
+        .company-title {
+            margin: 0;
+            color: var(--tech-green);
+            font-size: 2.5em;
+        }
+
+        .article-body { padding: 40px; }
+        h2 { border-left: 5px solid var(--cpc-green); padding-left: 15px; color: var(--tech-green); }
+        .content-card { background: #0d1117; padding: 25px; border-radius: 8px; margin-bottom: 20px; }
+        .highlight { color: var(--accent-blue); font-weight: bold; }
+        .footer { text-align: center; padding: 40px; color: #8b949e; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+
+    <div class="student-bar">
+        [ 班級：進修四技企管 3H ] &nbsp;&nbsp;&nbsp;&nbsp; [ 學號：91209H05 李Ｏ儒 ]
+    </div>
+
+    <div class="nav-container">
+        <a href="index.html" class="back-home-btn">🏠 返回首頁 (index.html)</a>
+    </div>
+
+    <div class="main-content">
+        <div class="company-hero-img">
+            <div class="img-overlay">
+                <img src="004.jpg" alt="CPC Logo" class="cpc-logo-mini">
+                <h1 class="company-title">04 台灣中油 (CPC Corporation)</h1>
+            </div>
+        </div>
+
+        <div class="article-body">
+            <div class="content-card">
+                <h2>經營理念：品質、服務、貢獻</h2>
+                <p>台灣中油秉持<span class="highlight">「品質第一、服務至上、貢獻社會」</span>的經營宗旨。作為國家能源供應的基石，中油不僅追求經濟效益，更肩負穩定國內物價與保障能源安全的責任。近年來，面對淨零排放挑戰，轉向「綠能中油」的永續發展理念已成為其核心文化。</p>
+            </div>
+
+            <div class="content-card">
+                <h2>2026 未來策略：優油、減碳、潔能</h2>
+                <p>邁向 2026 年，中油正經歷史上最大的「低碳轉型」，策略包括：</p>
+                <ul>
+                    <li><strong>氫能產業鏈佈局：</strong> 2026 年中油將完成首座 <span class="highlight">加氫站示範運行</span>，推動重型車輛與工業用氫的普及。</li>
+                    <li><strong>地熱開發量產化：</strong> 預計 2026 年地熱發電將成為中油多元綠能的重要支柱，實現能源供應的在地自主。</li>
+                    <li><strong>加油站轉型智慧能源站：</strong> 全台樞紐站點將具備太陽能發電、儲能及快充功能。</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h2>市場地位與分析</h2>
+                <p>台灣中油在國內油品與天然氣市場擁有絕對的領導地位。2026 年的轉型關鍵在於如何利用既有基礎設施平滑過渡至再生能源市場，落實環境責任（ESG）。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        © 2025 企管系專題報告 | 工業科技風格網頁設計
+    </div>
+
+</body>
+</html>

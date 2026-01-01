@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>企業專頁 - 台灣積體電路 (TSMC)</title>
+    <style>
+        :root {
+            --tech-blue: #00f2ff;
+            --tech-yellow: #ffea00;
+            --bg-dark: #0d1117;
+            --card-gray: #161b22;
+            --text-light: #e6edf3;
+            --tsmc-orange: #ff5722;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            font-family: 'Segoe UI', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* 固定頂部學籍資訊 */
+        .student-bar {
+            background: var(--tech-yellow);
+            color: #000;
+            text-align: center;
+            padding: 10px 0;
+            font-weight: bold;
+            font-size: 1.1em;
+            letter-spacing: 1px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* 導覽區域 */
+        .nav-container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .back-home-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border: 1px solid var(--tech-blue);
+            color: var(--tech-blue);
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s;
+            background: rgba(0, 242, 255, 0.05);
+        }
+
+        .back-home-btn:hover {
+            background: var(--tech-blue);
+            color: #000;
+            box-shadow: 0 0 20px var(--tech-blue);
+        }
+
+        /* 主內容區 */
+        .main-content {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: var(--card-gray);
+            border-radius: 12px;
+            border: 1px solid #30363d;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* 企業代表圖 (120dpi 高解析度感官) */
+        .company-hero-img {
+            width: 100%;
+            height: 400px;
+            background-image: url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=1200');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .img-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(13, 17, 23, 0.9));
+            padding: 30px;
+        }
+
+        .company-title {
+            margin: 0;
+            color: var(--tsmc-orange);
+            font-size: 2.5em;
+            text-transform: uppercase;
+            text-shadow: 0 0 15px rgba(255, 87, 34, 0.5);
+        }
+
+        /* 文字內容排版 */
+        .article-body {
+            padding: 40px;
+        }
+
+        h2 {
+            border-left: 5px solid var(--tsmc-orange);
+            padding-left: 15px;
+            color: var(--tsmc-orange);
+            margin-top: 30px;
+        }
+
+        .content-card {
+            background: #0d1117;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 2px solid #30363d;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 15px;
+        }
+
+        .highlight {
+            color: var(--tech-blue);
+            font-weight: bold;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px;
+            color: #8b949e;
+            font-size: 0.9em;
+        }
+
+        .industrial-tag {
+            background: #d73a49;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="student-bar">
+        [ 班級：進修四技企管 3H ] &nbsp;&nbsp;&nbsp;&nbsp; [ 學號：91209H05 李Ｏ儒 ]
+    </div>
+
+    <div class="nav-container">
+        <a href="index.html" class="back-home-btn">🏠 返回首頁 (index.html)</a>
+    </div>
+
+    <div class="main-content">
+        <div class="company-hero-img">
+            <div class="img-overlay">
+                <span class="industrial-tag">GLOBAL SEMICONDUCTOR FOUNDRY</span>
+                <h1 class="company-title">02 台灣積體電路 (TSMC)</h1>
+            </div>
+        </div>
+
+        <div class="article-body">
+            <div class="content-card">
+                <h2>經營理念：誠信與信任</h2>
+                <p>台積電的經營核心在於<span class="highlight">「誠信正直、承諾、創新、客戶信任」</span>。作為全球首創「純晶圓代工」模式的企業，台積電始終堅持不與客戶競爭，而是成為客戶技術與產能的最強後盾，建立起難以撼動的商業生態系統。</p>
+            </div>
+
+            <div class="content-card">
+                <h2>2026 未來策略：技術絕對領先</h2>
+                <p>展望 2026 年，台積電將進一步鞏固其在摩爾定律頂端的地位：</p>
+                <ul>
+                    <li><strong>A16 與 2奈米製程量產：</strong> 2026 年將是 <span class="highlight">2奈米 (N2)</span> 製程產能全面放量與 <span class="highlight">A16 (1.6奈米)</span> 製程準備進入市場的關鍵年，持續拉開與競爭對手的代際差距。</li>
+                    <li><strong>AI 驅動的先進封裝：</strong> 隨著大型語言模型對算力需求的持續增長，台積電將進一步擴張 <strong>CoWoS 與 SoIC 先進封裝</strong> 產能，實現晶片與系統的垂直整合。</li>
+                    <li><strong>全球製造節點成熟：</strong> 美國、日本及德國廠在 2026 年將進入營運穩定階段，實現「全球生產、台灣研發」的戰略布局，應對地緣政治下的韌性需求。</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h2>市場地位與分析</h2>
+                <p>台積電在全球先進製程市場（7奈米以下）擁有超過 <span class="highlight">90%</span> 的市佔率，是全球科技產業的「心臟」。從企管角度來看，台積電成功透過大規模資本支出與技術門檻，建立了極深的<strong>護城河</strong>，使其在半導體循環中仍能保持優異的獲利能力與議價權。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        © 2025 企管系專題報告 | 工業科技風格網頁設計
+    </div>
+
+</body>
+</html>

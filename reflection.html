@@ -2,188 +2,26 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>學習心得 - 網際網路與 AI 應用 | 工業風報告</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>學習心得 - 企管 3H 專題報告</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap');
-        
-        body {
-            font-family: 'Noto Sans TC', sans-serif;
-            background-color: #1a1a1a;
-            background-image: radial-gradient(#333 1px, transparent 1px);
-            background-size: 20px 20px;
-            color: #e5e5e5;
-        }
-
-        .industrial-border {
-            border: 2px solid #333;
-            position: relative;
-            background: #262626;
-        }
-
-        .industrial-border::after {
-            content: "";
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            width: 20px;
-            height: 20px;
-            border-top: 4px solid #22c55e; /* 螢光綠 */
-            border-left: 4px solid #22c55e;
-        }
-
-        .section-title {
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            background: linear-gradient(to right, #22c55e, #4ade80);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 900;
-        }
-
-        .nav-link:hover {
-            color: #fca311;
-            border-bottom: 2px solid #fca311;
-        }
-
-        .reflection-content p {
-            margin-bottom: 1.5rem;
-            text-align: justify;
-            color: #d1d5db;
-        }
-
-        /* 警告條紋背景 */
-        .warning-stripe {
-            background: repeating-linear-gradient(
-                45deg,
-                #22c55e,
-                #22c55e 10px,
-                #166534 10px,
-                #166534 20px
-            );
-            height: 4px;
-            width: 100%;
-        }
-
-        /* 自定義捲軸 */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #1a1a1a; }
-        ::-webkit-scrollbar-thumb { background: #444; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #22c55e; }
+        body { background: #0a0a0c; color: white; font-family: 'Segoe UI', sans-serif; margin: 0; }
+        .header-info { background: #ffea00; color: #000; padding: 10px; font-weight: bold; text-align: center; }
+        .container { max-width: 800px; margin: 80px auto; padding: 40px; background: #161b22; border: 2px solid #ff00ff; border-radius: 20px; }
+        h1 { color: #ff00ff; border-bottom: 1px solid #333; padding-bottom: 20px; }
+        .back-btn { display: inline-block; margin-bottom: 20px; color: #00f2ff; text-decoration: none; font-weight: bold; }
+        p { line-height: 1.8; color: #ccc; }
     </style>
 </head>
-<body class="leading-relaxed">
+<body>
+    <div class="header-info">[ 班級：進修四技企管 3H ] [ 學號：91209H05 李Ｏ儒 ]</div>
+    <div class="container">
+        <a href="index.html" class="back-btn">← 返回首頁</a>
+        <h1>學習心得 Reflection</h1>
+        <p>在本次作業中，我首度嘗試將 GPT 與 Gemini 作為開發夥伴，這徹底改變了我對寫程式與設計的認知。過去在處理網頁開發（如 HTML/CSS 或 JavaScript）時，常因為語法細節或除錯而卡關很久，但透過 AI，我只需描述功能邏輯，它便能迅速生成結構化的程式碼。特別是在使用 Gemini 進行邏輯推導與 GPT 輔助排版建議時，兩者的互補讓我能更直觀地理解程式架構，大幅縮短了從零到一的建置時間。</p>
+        <p>除了程式編寫，AI 的圖片生成能力也為我的網頁注入了視覺靈魂。我利用指令（Prompt）精準描述所需的風格與情境，產出了極具質感的背景圖與圖示。在調教 AI 生成影像的過程中，我學會了如何更精煉地表達設計需求。這種「以口代筆」的創作方式，不僅彌補了我美感經驗的不足，更讓網頁的整體視覺效果提升到專業水準。</p>
+        <p>總結來說，這次經驗讓我體認到，未來開發者的競爭力不在於背誦語法，而是在於「與 AI 對話的能力」。雖然 AI 能高效產出內容，但最終的邏輯校對、美感定奪與系統整合，仍需仰賴人類的判斷。這次作業不僅讓我學會了技術應用，更啟發我思考如何在這波 AI 浪潮中，保持思考的獨立性並發揮工具的最大價值。</p>
 
-    <nav class="bg-[#111] border-b-4 border-[#22c55e] sticky top-0 z-50">
-        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center p-4">
-            <div class="flex items-center space-x-3 mb-4 md:mb-0">
-                <a href="index.html" class="flex items-center space-x-3">
-                    <div class="bg-[#22c55e] p-2 rounded-sm">
-                        <i class="fas fa-microchip text-black text-xl"></i>
-                    </div>
-                    <span class="font-black text-2xl tracking-tighter text-white">RETAIL <span class="text-[#22c55e]">ANALYSIS</span></span>
-                </a>
-            </div>
-            <ul class="flex flex-wrap justify-center gap-6 font-bold text-gray-400">
-                <li><a href="index.html" class="nav-link transition-all">首頁回歸</a></li>
-                <li><a href="costco.html" class="nav-link transition-all">好市多</a></li>
-                <li><a href="pxmart.html" class="nav-link transition-all">全聯體系</a></li>
-                <li><a href="carrefour.html" class="nav-link transition-all">家樂福</a></li>
-                <li><a href="amart.html" class="nav-link transition-all">愛買</a></li>
-                <li><a href="reflection.html" class="text-[#22c55e] border-b-2 border-[#22c55e]">學習心得</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <main class="container mx-auto px-4 py-16 max-w-4xl">
-        
-        <header class="mb-12 text-center">
-            <div class="inline-block border-2 border-[#22c55e] px-6 py-2 mb-6">
-                <h1 class="text-3xl md:text-5xl font-black tracking-widest text-white uppercase">
-                    Learning <span class="text-[#22c55e]">Reflection</span>
-                </h1>
-            </div>
-            <div class="flex justify-center items-center space-x-4 text-gray-500 font-mono text-xs">
-                <span>[ SUBJECT: WEB & AI APP ]</span>
-                <span>[ STATUS: COMPLETE ]</span>
-                <span>[ DATE: 2025/12/31 ]</span>
-            </div>
-        </header>
-
-        <div class="industrial-border p-1">
-            <div class="bg-[#1e1e1e] p-8 md:p-12 relative overflow-hidden">
-                <div class="absolute -right-10 -top-10 text-9xl font-black text-white/5 pointer-events-none select-none italic">
-                    AI
-                </div>
-
-                <div class="flex items-center mb-10 border-b border-gray-800 pb-6">
-                    <div class="bg-[#22c55e]/10 p-4 rounded-full mr-6">
-                        <i class="fas fa-brain text-[#22c55e] text-3xl"></i>
-                    </div>
-                    <h2 class="section-title text-2xl md:text-4xl">網際網路與 AI 應用心得</h2>
-                </div>
-
-                <div class="reflection-content text-lg leading-loose">
-                    <p>
-                        在本次作業中，我首度嘗試將 GPT 與 Gemini 作為開發夥伴，這徹底改變了我對寫程式與設計的認知。過去在處理網頁開發（如 HTML/CSS 或 JavaScript）時，常因為語法細節或除錯而卡關很久，但透過 AI，我只需描述功能邏輯，它便能迅速生成結構化的程式碼。特別是在使用 Gemini 進行邏輯推導與 GPT 輔助排版建議時，兩者的互補讓我能更直觀地理解程式架構，大幅縮短了從零到一的建置時間。
-                    </p>
-                    
-                    <div class="warning-stripe my-10"></div>
-
-                    <p>
-                        除了程式編寫，AI 的圖片生成能力也為我的網頁注入了視覺靈魂。我利用指令（Prompt）精準描述所需的風格與情境，產出了極具質感的背景圖與圖示。在調教 AI 生成影像的過程中，我學會了如何更精煉地表達設計需求。這種「以口代筆」的創作方式，不僅彌補了我美感經驗的不足，更讓網頁的整體視覺效果提升到專業水準。
-                    </p>
-
-                    <div class="bg-black/40 p-6 border-l-4 border-[#22c55e] my-10 font-mono italic text-gray-400">
-                        "總結來說，這次經驗讓我體認到，未來開發者的競爭力不在於背誦語法，而是在於「與 AI 對話的能力」。雖然 AI 能高效產出內容，但最終的邏輯校對、美感定奪與系統整合，仍需仰賴人類的判斷。這次作業不僅讓我學會了技術應用，更啟發我思考如何在這波 AI 浪潮中，保持思考的獨立性並發揮工具的最大價值。"
-                    </div>
-                </div>
-
-                <div class="mt-16 flex flex-col md:flex-row justify-between items-end border-t border-gray-800 pt-8 gap-6">
-                    <div class="font-mono text-sm text-gray-500">
-                        <div class="flex items-center space-x-2">
-                            <span class="bg-gray-800 px-2">CLASS</span>
-                            <span>進修四技企管 3H</span>
-                        </div>
-                        <div class="flex items-center space-x-2 mt-2">
-                            <span class="bg-gray-800 px-2">ID</span>
-                            <span>91209H05</span>
-                        </div>
-                    </div>
-                    <div class="text-right">
-                        <p class="text-xs text-gray-600 mb-1 uppercase tracking-widest text-white">Authorized Signature</p>
-                        <div class="h-px w-48 bg-gray-700 mb-2"></div>
-                        <p class="font-bold text-[#22c55e]">數位化轉型觀察員</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="mt-16 flex justify-center">
-            <a href="index.html" class="group flex items-center space-x-4 bg-gray-800 hover:bg-[#22c55e] px-8 py-4 transition-all duration-300">
-                <i class="fas fa-arrow-left text-[#22c55e] group-hover:text-black"></i>
-                <span class="font-black tracking-widest uppercase group-hover:text-black">返回系統首頁 / Return to Dashboard</span>
-            </a>
-        </div>
-    </main>
-
-    <footer class="bg-black border-t-8 border-[#22c55e] py-12">
-        <div class="container mx-auto px-4 text-center">
-            <div class="flex justify-center space-x-8 mb-6 text-gray-600">
-                <i class="fas fa-terminal hover:text-[#22c55e] transition-colors"></i>
-                <i class="fas fa-code-branch hover:text-[#22c55e] transition-colors"></i>
-                <i class="fas fa-bolt hover:text-[#22c55e] transition-colors"></i>
-            </div>
-            <p class="text-gray-500 font-mono text-xs uppercase tracking-widest">
-                System Logic Log: Final Reflection Uploaded... [OK]
-            </p>
-            <p class="text-gray-700 text-[10px] mt-4 uppercase">
-                &copy; 2025 AI-RETAIL ANALYSIS PROJECT. No duplication allowed.
-            </p>
-        </div>
-    </footer>
-
+    </div>
 </body>
 </html>

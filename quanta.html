@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>企業專頁 - 廣達電腦 (Quanta Computer)</title>
+    <style>
+        :root {
+            --tech-blue: #00d2ff;
+            --tech-cyan: #00f2ff;
+            --tech-yellow: #ffea00;
+            --bg-dark: #0a0c10;
+            --card-gray: #1c2128;
+            --text-light: #adbac7;
+            --quanta-red: #e60012;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            font-family: 'Segoe UI', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* 固定頂部學籍資訊 */
+        .student-bar {
+            background: var(--tech-yellow);
+            color: #000;
+            text-align: center;
+            padding: 10px 0;
+            font-weight: bold;
+            font-size: 1.1em;
+            letter-spacing: 1px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* 導覽區域 */
+        .nav-container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .back-home-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border: 1px solid var(--tech-cyan);
+            color: var(--tech-cyan);
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s;
+            background: rgba(0, 242, 255, 0.05);
+        }
+
+        .back-home-btn:hover {
+            background: var(--tech-cyan);
+            color: #000;
+            box-shadow: 0 0 20px var(--tech-cyan);
+        }
+
+        /* 主內容區 */
+        .main-content {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: var(--card-gray);
+            border-radius: 12px;
+            border: 1px solid #444c56;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* 企業代表圖 (120dpi 高解析度感官) */
+        .company-hero-img {
+            width: 100%;
+            height: 400px;
+            background-image: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=1200');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .img-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(10, 12, 16, 0.9));
+            padding: 30px;
+        }
+
+        .company-title {
+            margin: 0;
+            color: #fff;
+            font-size: 2.5em;
+            text-transform: uppercase;
+            border-left: 8px solid var(--quanta-red);
+            padding-left: 20px;
+        }
+
+        /* 文字內容排版 */
+        .article-body {
+            padding: 40px;
+        }
+
+        h2 {
+            color: var(--tech-cyan);
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+        }
+
+        h2::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: #444c56;
+            margin-left: 20px;
+        }
+
+        .content-card {
+            background: rgba(34, 39, 46, 0.5);
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #444c56;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 15px;
+        }
+
+        .highlight {
+            color: var(--tech-yellow);
+            font-weight: bold;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px;
+            color: #768390;
+            font-size: 0.9em;
+        }
+
+        .industrial-tag {
+            background: var(--quanta-red);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            display: inline-block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="student-bar">
+        [ 班級：進修四技企管 3H ] &nbsp;&nbsp;&nbsp;&nbsp; [ 學號：91209H05 李Ｏ儒 ]
+    </div>
+
+    <div class="nav-container">
+        <a href="index.html" class="back-home-btn">🏠 返回首頁 (index.html)</a>
+    </div>
+
+    <div class="main-content">
+        <div class="company-hero-img">
+            <div class="img-overlay">
+                <span class="industrial-tag">AI INFRASTRUCTURE LEADER</span>
+                <h1 class="company-title">03 廣達電腦 (Quanta Computer)</h1>
+            </div>
+        </div>
+
+        <div class="article-body">
+            <div class="content-card">
+                <h2>經營理念：真善美與技術創新</h2>
+                <p>廣達電腦以「真、善、美」為企業精神，並堅持以<span class="highlight">「創新」</span>作為發展的核心驅動力。從最初的筆記型電腦龍頭，到如今轉型為雲端運算與 AI 基礎設施的領航者，廣達始終強調快速學習、彈性應變與極致品質，致力於將先進科技轉化為改善人類生活的解決方案。</p>
+            </div>
+
+            <div class="content-card">
+                <h2>2026 未來策略：AI 全方位整合</h2>
+                <p>邁向 2026 年，廣達將重心全面鎖定在「AI」與「車用」雙引擎：</p>
+                <ul>
+                    <li><strong>AI 超級電腦與伺服器：</strong> 2026 年廣達將實現 <span class="highlight">液冷散熱技術</span> 的大規模普及，應用於次世代 AI 伺服器機櫃，滿足超大型資料中心對高效能運算與低能耗的嚴苛要求。</li>
+                    <li><strong>AI PC 生態系：</strong> 隨著硬體端導入專屬 NPU 處理器，廣達將協助全球品牌客戶於 2026 年全面推展消費級與企業級 AI PC，帶動筆電市場的升級換機潮。</li>
+                    <li><strong>智慧車載運算平台：</strong> 擴大與國際車廠合作，2026 年將在<span class="highlight">自動駕駛電腦 (ADCU)</span> 與車聯網系統取得顯著市佔，將 AI 技術從雲端延伸至終端車載應用。</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h2>市場地位與分析</h2>
+                <p>廣達目前是全球雲端伺服器市場的龍頭廠商，擁有強大的研發實力與靈活的生產能力。透過與一線雲端服務供應商 (CSP) 的緊密共同研發 (JDM) 模式，廣達成功建立了高度的技術壁壘。在企管策略分析中，廣達展現了優異的<strong>「第二曲線」開發能力</strong>，成功從傳統硬體代工跨足高毛利的系統整合服務。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        © 2025 企管系專題報告 | 工業科技風格網頁設計
+    </div>
+
+</body>
+</html>
