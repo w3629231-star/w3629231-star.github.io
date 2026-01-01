@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>企業專頁 - 鴻海精密工業 (Foxconn)</title>
+    <style>
+        :root {
+            --tech-blue: #00f2ff;
+            --tech-yellow: #ffea00;
+            --bg-dark: #0d1117;
+            --card-gray: #161b22;
+            --text-light: #e6edf3;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            font-family: 'Segoe UI', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* 固定頂部學號資訊 */
+        .student-bar {
+            background: var(--tech-yellow);
+            color: #000;
+            text-align: center;
+            padding: 10px 0;
+            font-weight: bold;
+            font-size: 1.1em;
+            letter-spacing: 1px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        /* 導覽區域 */
+        .nav-container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .back-home-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border: 1px solid var(--tech-blue);
+            color: var(--tech-blue);
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s;
+            background: rgba(0, 242, 255, 0.05);
+        }
+
+        .back-home-btn:hover {
+            background: var(--tech-blue);
+            color: #000;
+            box-shadow: 0 0 20px var(--tech-blue);
+        }
+
+        /* 主內容區 */
+        .main-content {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: var(--card-gray);
+            border-radius: 12px;
+            border: 1px solid #30363d;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* 企業代表圖 (工業感大圖) */
+        .company-hero-img {
+            width: 100%;
+            height: 400px;
+            background-image: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .img-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(13, 17, 23, 0.9));
+            padding: 30px;
+        }
+
+        .company-title {
+            margin: 0;
+            color: var(--tech-blue);
+            font-size: 2.5em;
+            text-transform: uppercase;
+        }
+
+        /* 文字內容排版 */
+        .article-body {
+            padding: 40px;
+        }
+
+        h2 {
+            border-left: 5px solid var(--tech-blue);
+            padding-left: 15px;
+            color: var(--tech-blue);
+            margin-top: 30px;
+        }
+
+        .content-card {
+            background: #0d1117;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 2px solid #30363d;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 15px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px;
+            color: #8b949e;
+            font-size: 0.9em;
+        }
+
+        /* 工業風格標記 */
+        .industrial-tag {
+            background: #238636;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="student-bar">
+        [ 班級：進修四技企管 3H ] &nbsp;&nbsp;&nbsp;&nbsp; [ 學號：91209H05 李Ｏ儒 ]
+    </div>
+
+    <div class="nav-container">
+        <a href="index.html" class="back-home-btn">🏠 返回首頁 (index.html)</a>
+    </div>
+
+    <div class="main-content">
+        <div class="company-hero-img">
+            <div class="img-overlay">
+                <span class="industrial-tag">GLOBAL EMS LEADER</span>
+                <h1 class="company-title">01 鴻海精密工業 (Foxconn)</h1>
+            </div>
+        </div>
+
+        <div class="article-body">
+            <div class="content-card">
+                <h2>經營理念：速度與價值</h2>
+                <p>鴻海以「愛心、信心、決心」為基礎，核心競爭力體現在<strong>「速度、品質、工程服務、效率、成本」</strong>。創辦人郭台銘確立的垂直整合模式，讓鴻海不僅是全球最大的電子代工廠，更是具備「全球布局、在地化生產」實力的科技巨擘。</p>
+            </div>
+
+            <div class="content-card">
+                <h2>2025 未來策略：轉型與升級</h2>
+                <p>面對 2025 年的全球市場，鴻海致力於從「勞力密集」向「腦力密集」轉型，具體策略如下：</p>
+                <ul>
+                    <li><strong>AI 伺服器 (AI Server)：</strong> 2025 年鴻海將成為全球 AI 硬體架構的核心供應商，特別是與 NVIDIA 合作的 <strong>GB200 伺服器</strong> 將進入大規模量產期，佔據全球 AI 伺服器 40% 以上市佔率。</li>
+                    <li><strong>電動車 (EV) 布局：</strong> 透過 <strong>MIH 開放平台</strong>，2025 年將在美國、泰國、台灣等地實現多款電動車量產，實現「代工設計」與「關鍵零組件」雙箭頭增長。</li>
+                    <li><strong>3+3 產業轉型：</strong> 持續深耕「電動車、數位健康、機器人」三大新興產業，以及「人工智慧、半導體、新世代通訊」三項核心技術，提升毛利率。</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h2>市場地位與分析</h2>
+                <p>2025 年預計營收將再創新高。隨著供應鏈從中國擴展至印度、墨西哥與越南，鴻海展現了極強的<strong>供應鏈韌性</strong>。在企管角度分析，鴻海成功地將低毛利的代工業務轉化為具備高技術含量的「系統整合服務」。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        © 2025 企管系專題報告 | 工業科技風格網頁設計
+    </div>
+
+</body>
+</html>
